@@ -1,2 +1,2 @@
-aa: int = "poi"
+aa: str = "poi"
 print(aa)
