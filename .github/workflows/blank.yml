@@ -19,7 +19,7 @@ jobs:
     - name: install poetry
       run: |
         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-        echo "$HOME/.poetry/bin" >> $GITHUB_PATH
+        echo "PATH=${PATH}:$HOME/.poetry/bin" >> $GITHUB_ENV
         poetry --version
     - name: checkout main branch
       uses: actions/checkout@main
