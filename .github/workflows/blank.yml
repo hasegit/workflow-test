@@ -16,6 +16,12 @@ jobs:
     name: pylint
     runs-on: ubuntu-latest
     steps:
+    # Update Python https://github.com/actions/setup-python
+    - name: update python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.10'
+        architecture: 'x64'
     - name: install poetry
       run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
     - run: echo "PATH=${PATH}:$HOME/.poetry/bin" >> $GITHUB_ENV
