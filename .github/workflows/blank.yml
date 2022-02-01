@@ -17,10 +17,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: install poetry
-      run: |
-        curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
-        echo "PATH=${PATH}:$HOME/.poetry/bin" >> $GITHUB_ENV
-        poetry --version
+      run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+    - run: echo "PATH=${PATH}:$HOME/.poetry/bin" >> $GITHUB_ENV
+    - run: env
+    - run: poetry --version
     - name: checkout main branch
       uses: actions/checkout@main
     # Runs a single command using the runners shell
