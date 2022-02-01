@@ -15,12 +15,11 @@ jobs:
   pylint:
     name: pylint
     runs-on: ubuntu-latest
-    env:
-      PATH: ${PATH}:${HOME}/.poetry/bin
     steps:
     - name: install poetry
       run: |
         curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+        echo "$HOME/.poetry/bin" >> $GITHUB_PATH
         poetry --version
     - name: checkout main branch
       uses: actions/checkout@main
