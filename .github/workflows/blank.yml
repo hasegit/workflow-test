@@ -16,6 +16,7 @@ jobs:
     name: pylint
     runs-on: ubuntu-latest
     steps:
+    - uses: actions/checkout@main
     # Runs a single command using the runners shell
     - name: hoge
       run: ls -l;pwd
