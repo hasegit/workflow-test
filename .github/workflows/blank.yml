@@ -18,5 +18,8 @@ jobs:
     steps:
     # Runs a single command using the runners shell
     - name: Run a one-line script
-      run: python -V
+      run: python tmp.py
+      
+    - name: hoge
+      run: ls -l;pwd
 
