@@ -26,7 +26,7 @@ jobs:
     - name: set env
       run: echo "PATH=${PATH}:$HOME/.poetry/bin" >> $GITHUB_ENV
     - name: checkout main branch
-      uses: actions/checkout@${{ github.ref }}
+      uses: actions/checkout@v2
     # Runs a single command using the runners shell
     - name: install packages via poetry
       run: poetry install
