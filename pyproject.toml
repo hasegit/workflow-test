@@ -1,0 +1,52 @@
+[tool.black]
+line-length = 99
+
+[tool.isort]
+line_length = 99
+profile = "black"
+skip_gitignore = "True"
+
+[tool.mypy]
+files = [
+    "area_information_city",
+]
+ignore_missing_imports = "True"
+
+[tool.pylint]
+    [tool.pylint.messages_control]
+    disable = [
+        "C0114", # missing-module-docstring
+        "C0115",
+        "C0116", # missing-function-docstring
+        "E0401", # import-error
+        "R0903", # too-few-public-methods
+    ]
+    [tool.pylint.format]
+    max-line-length = "99"
+
+[tool.poetry]
+name = "area_information_city"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+requests = "^2.27.1"
+beautifulsoup4 = "^4.10.0"
+xlrd = "^2.0.1"
+html5lib = "^1.1"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+isort = "^5.10.1"
+pytest = "^6.2.5"
+pytest-cov = "^3.0.0"
+pre-commit = "^2.17.0"
+pylint = "^2.12.2"
+mypy = "^0.931"
+types-requests = "^2.27.8"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
