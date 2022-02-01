@@ -16,7 +16,10 @@ jobs:
     name: pylint
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@main
+    - name: install poetry
+      run: curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+    - name: checkout main branch
+      uses: actions/checkout@main
     # Runs a single command using the runners shell
     - name: hoge
       run: ls -l;pwd
