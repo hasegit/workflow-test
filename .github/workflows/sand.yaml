@@ -19,10 +19,5 @@ jobs:
       with:
         python-version: '3.10'
         architecture: 'x64'
-    - name: check bef
-      run: aws --version
-      continue-on-error: true
-    - name: setup sam
-      uses: aws-actions/setup-sam@v1
     - name: check
       run: aws --version
