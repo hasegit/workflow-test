@@ -15,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: check 
-      uses: which sls
+      run: which sls
