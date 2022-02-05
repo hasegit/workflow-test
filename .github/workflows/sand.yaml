@@ -14,5 +14,7 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: check 
-      run: sls deploy help
+    - name: setup sam
+      uses: aws-actions/setup-sam@v1
+    - name: check
+      run: aws --version
