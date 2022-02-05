@@ -15,4 +15,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: check 
-      run: which sls
+      run: sls deploy help
