@@ -12,7 +12,6 @@ on:
 
 jobs:
   test:
-    name: test
     runs-on: ubuntu-latest
     steps:
     # Update Python https://github.com/actions/setup-python
@@ -34,5 +33,10 @@ jobs:
       run: poetry run mypy tmp.py
     - name: check lint
       run: poetry run pylint tmp.py
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+    - name: hello
+      run: echo "HELLO"
       
     
